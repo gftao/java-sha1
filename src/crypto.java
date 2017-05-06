@@ -61,12 +61,12 @@ public class crypto {
         crypto ct = new crypto();
         RSAHelper cipher = new RSAHelper();
 
-
         try {
+            //load rsa key file
             InputStream is = new FileInputStream("pra_pkcs8.pem");
             InputStreamReader reader = new InputStreamReader(is, "UTF-8");
             BufferedReader br = new BufferedReader(reader);
-            StringBuffer sb = new StringBuffer();
+
             br.readLine();
             String tmpStr = "";
             while((tmpStr= br.readLine()) != null){
